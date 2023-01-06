@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+//SCHEME FOR A DOCOMENT OF USERS COLLECTION
 const userSchema = new mongoose.Schema({
   email: {
     type: String,
@@ -16,4 +17,4 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model('userSchema',userSchema);
+export default mongoose.model("userSchema", userSchema);
