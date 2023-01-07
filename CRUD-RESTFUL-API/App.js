@@ -3,7 +3,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import userRouter from "./Routers/Users.js";
 const App = express();
-const PORT = 3000;
+const PORT = 9000;
 
 
 //Connection to localhost server
