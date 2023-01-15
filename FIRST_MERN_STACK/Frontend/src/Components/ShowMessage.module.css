@@ -1,0 +1,21 @@
+.card {
+  width: 300px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+}
+
+.card-header {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-content {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
