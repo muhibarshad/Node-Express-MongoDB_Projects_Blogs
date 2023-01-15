@@ -7,7 +7,9 @@ const Message = (props) => {
 
   const [isShowMessage, setShowMessage] = useState(false);
   const [error, setError] = useState("");
+  const [secretCode, setsecretCode] = useState("");
   const code = useRef("");
+
   const hideModelHanler = () => {
     setModel(() => false);
   };
@@ -22,6 +24,7 @@ const Message = (props) => {
       setModel(() => true);
     } else {
       setShowMessage(() => true);
+      setsecretCode(data);
     }
   };
   return (
@@ -44,7 +47,7 @@ const Message = (props) => {
           </form>
         </div>
       )}
-      {isShowMessage && <ShowMessage />}
+      {isShowMessage && <ShowMessage value={secretCode} />}
     </Fragment>
   );
 };

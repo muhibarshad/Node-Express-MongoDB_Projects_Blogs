@@ -5,6 +5,10 @@ const messagesSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  code: {
+    type: String,
+    required: true,
+  },
 });
 const Message = mongoose.model("Message", messagesSchema);
 export default Message;
