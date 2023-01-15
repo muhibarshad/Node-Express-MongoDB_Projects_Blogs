@@ -3,14 +3,16 @@ import Message from "../Models/schema.mjs";
 
 const router = express.Router();
 
-// router.get("/", async (req, res) => {
-//   try {
-//     const data = await Message.find();
-//     res.json(data);
-//   } catch (error) {
-//     res.send(`Error : {error}`);
-//   }
-// });
+router.get("/", async (req, res) => {
+  try {
+    const data = await Message.find();
+    res.json(data);
+    // const data = await Message.deleteMany({});
+    // res.json("All Data Deleted Successfully");
+  } catch (error) {
+    res.send(`Error : {error}`);
+  }
+});
 
 router.get("/:code", async (req, res) => {
   try {
