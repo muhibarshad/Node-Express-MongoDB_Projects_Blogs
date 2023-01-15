@@ -9,6 +9,7 @@ const AddMessage = (props) => {
   const [savedSuccessfully, setSavedSuccessfully] = useState(false);
 
   const message = useRef("");
+      {/* {isModel &&  <Model hide={hideModelHanler} errorMsg={error} />} */}
   const code = useRef("");
 
   const savingDataHandler = useCallback(async (secretData) => {
@@ -57,13 +58,11 @@ const AddMessage = (props) => {
   };
 
   let content = "";
-  if (isModel) {
-    content = <Model hide={hideModelHanler} errorMsg={error} />;
-  }
+
   if (savedSuccessfully) {
     content = (
       <div class={addMessageStyle["success-message"]}>
-        <p>Data saved successfully</p>
+        <h2>Data saved successfully</h2>
       </div>
     );
   } else {
@@ -93,6 +92,9 @@ const AddMessage = (props) => {
         </form>
       </div>
     );
+  }
+  if (isModel) {
+    content = <Model hide={hideModelHanler} errorMsg={error} />;
   }
 
   return <Fragment>{content}</Fragment>;
