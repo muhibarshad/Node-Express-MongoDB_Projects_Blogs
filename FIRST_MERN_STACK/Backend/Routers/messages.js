@@ -17,7 +17,7 @@ router.get("/:code", async (req, res) => {
     const specificMessage = await Message.findOne({ code: req.params.code });
     res.json(specificMessage);
   } catch (error) {
-    res.send(`Error ${error}`);
+    res.send(`Error ${error.message}`);
   }
 });
 router.post("/", async (req, res) => {
@@ -29,7 +29,7 @@ router.post("/", async (req, res) => {
     const savedData = await newMessage.save();
     res.json(savedData);
   } catch (error) {
-    res.send(`Error : {error}`);
+    res.send(`Error : ${error.message}`);
   }
 });
 export default router;

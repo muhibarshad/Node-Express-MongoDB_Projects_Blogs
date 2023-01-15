@@ -8,6 +8,7 @@ const ShowMessage = (props) => {
   const [errorMsg, setErrorMsg] = useState("");
   const dataFetchingHandler = useCallback(async () => {
     try {
+      setIsLoading(true);
       const response = await fetch(
         `http://localhost:9000/messages/${props.value}`
       );
@@ -25,31 +26,42 @@ const ShowMessage = (props) => {
     } catch (error) {
       setErrorMsg(error.message);
     }
+    setIsLoading(false);
   }, []);
   useEffect(() => {
     dataFetchingHandler();
   }, [dataFetchingHandler]);
 
-  const error = (
-    <div className={showMessage["error-message"]}>
-      <h2>{errorMsg}</h2>
-    </div>
-  );
-  return (
-    <Fragment>
-      {!secretData && error}
-      {secretData && (
-        <div class={showMessage.card}>
-          <div
-            class={showMessage["card-header"]}
-          >{`Secret Code: ${secretData.code}`}</div>
-          <div class={showMessage["card-content"]}>
-            <p>{secretData.message}</p>
-          </div>
+  let content = "";
+
+  if (isLoading) {
+    content = (
+      <div class={showMessage["loading-spinner"]}>
+        <div class={showMessage["rolling-spinner"]}></div>
+      </div>
+    );
+  }
+  if (errorMsg) {
+    content = (
+      <div className={showMessage["error-message"]}>
+        <h2>{errorMsg}</h2>
+      </div>
+    );
+  }
+  if (secretData) {
+    content = (
+      <div class={showMessage.card}>
+        <div
+          class={showMessage["card-header"]}
+        >{`Secret Code: ${secretData.code}`}</div>
+        <div class={showMessage["card-content"]}>
+          <p>{secretData.message}</p>
         </div>
-      )}
-    </Fragment>
-  );
+      </div>
+    );
+  }
+
+  return <Fragment>{content}</Fragment>;
 };
 
 export default ShowMessage;

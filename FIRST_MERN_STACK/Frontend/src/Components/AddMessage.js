@@ -1,4 +1,4 @@
-import React, { Fragment, useRef, useState } from "react";
+import React, { Fragment, useCallback, useRef, useState } from "react";
 import Model from "../UI/Model";
 
 import * as addMessageStyle from "./AddMessage.module.css";
@@ -6,8 +6,26 @@ import * as addMessageStyle from "./AddMessage.module.css";
 const AddMessage = (props) => {
   const [isModel, setModel] = useState(false);
   const [error, setError] = useState("");
+  const [savedSuccessfully, setSavedSuccessfully] = useState(false);
+
   const message = useRef("");
   const code = useRef("");
+
+  const savingDataHandler = useCallback(async (secretData) => {
+    console.log(secretData);
+    const response = await fetch("http://localhost:9000/messages", {
+      method: "POST",
+      body: JSON.stringify(secretData),
+      headers: {
+        "content-type": "application/json",
+      },
+    });
+    const data = await response.json();
+    if (data) {
+      setSavedSuccessfully(true);
+    }
+  }, []);
+
   const validationForm = (e) => {
     e.preventDefault();
     const data = {
@@ -30,14 +48,26 @@ const AddMessage = (props) => {
     ) {
       setError("Code must contain at least 5 characters!");
       setModel(() => true);
+    } else {
+      savingDataHandler(data);
     }
   };
   const hideModelHanler = () => {
     setModel(() => false);
   };
-  return (
-    <Fragment>
-      {isModel && <Model hide={hideModelHanler} errorMsg={error} />}
+
+  let content = "";
+  if (isModel) {
+    content = <Model hide={hideModelHanler} errorMsg={error} />;
+  }
+  if (savedSuccessfully) {
+    content = (
+      <div class={addMessageStyle["success-message"]}>
+        <p>Data saved successfully</p>
+      </div>
+    );
+  } else {
+    content = (
       <div className={addMessageStyle["form-container"]}>
         <form>
           <label for="message">Message:</label>
@@ -62,8 +92,10 @@ const AddMessage = (props) => {
           </button>
         </form>
       </div>
-    </Fragment>
-  );
+    );
+  }
+
+  return <Fragment>{content}</Fragment>;
 };
 
 export default AddMessage;
