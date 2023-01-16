@@ -16,7 +16,7 @@ If you're interested in seeing what I can do with backnd (of MEN), you've come t
 
 # Blogs
 
-Welcome to [my](https://github.com/muhib7353/nodejs-express-mongodb-exploration) Github repository of Backend blogs! Inside, you'll find a wealth of knowledge on everything from the basics of databse and REST APIS and routers to more advanced topics and best practices. Whether you're a beginner looking to learn more about backend or an experienced developer looking to improve your skills, I hope you'll find something here that's helpful and informative.
+Welcome to [my](https://github.com/muhib7353/Node-Express-MongoDB_Projects_Blogs) Github repository of Backend blogs! Inside, you'll find a wealth of knowledge on everything from the basics of databse and REST APIS and routers to more advanced topics and best practices. Whether you're a beginner looking to learn more about backend or an experienced developer looking to improve your skills, I hope you'll find something here that's helpful and informative.
 
 # 20% OFF Extra
 
