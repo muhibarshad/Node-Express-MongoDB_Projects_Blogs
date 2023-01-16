@@ -2,7 +2,8 @@
   <img src="men.png">
 </div>
 <br>
-<h1 align="center" style="font-size: 80px;" > Express_MonogoDB_Node_Blogs-and-Projects<h1/>
+<h1 align="center" style="font-size: 120px;" > Express-MonogoDB-Node
+<br>Blogs-and-Projects<h1/>
 
 ### Author: [MUHIB ARSHAD](https://github.com/muhib7353)
 
