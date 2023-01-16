@@ -2,7 +2,7 @@
   <img src="mern.png">
 </div>
 <br>
-<h1 align="center" style="font-size: 80px;" > Express-MonogoDB-Node-Blogs-and-Projects<h1/>
+<h1 align="center" style="font-size: 80px;" > Express_MonogoDB_Node_Blogs-and-Projects<h1/>
 
 ### Author: [MUHIB ARSHAD](https://github.com/muhib7353)
 
@@ -73,4 +73,4 @@ You can also follow my GitHub profile to stay updated on my latest projects:
 
 Copyright © 2022 [Muhib Arshad](https://github.com/muhib7353).
 
-This project is [MIT](https://github.com/muhib7353/React.js-Complete-Tips_and_Guidance/blob/main/License.md) licensed.
+This project is [MIT](/License.md) licensed.
