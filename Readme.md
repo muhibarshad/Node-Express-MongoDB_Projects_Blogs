@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="mern.png">
+  <img src="men.png">
 </div>
 <br>
 <h1 align="center" style="font-size: 80px;" > Express_MonogoDB_Node_Blogs-and-Projects<h1/>
