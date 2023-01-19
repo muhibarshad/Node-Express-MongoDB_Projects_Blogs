@@ -1,10 +1,18 @@
 #!/usr/bin/env bash
 
-function gitCommands(){
+if [ $# -eq 0]
+then
+    echo "Please provide a commit message"
+    exit 1
+fi
+
+function gitCommands() {
     git add -A
-    git commit -m "Added:New Feature"
+    git commit -m "$1"
     git push origin main
 }
 
-message="Git commands executed Successfully"
-gitCommands && echo $message
+gitCommands "$1" && echo "Git Commands Executed Successfully"
+
+
+
