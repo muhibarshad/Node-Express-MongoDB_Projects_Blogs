@@ -2,8 +2,8 @@
 
 function gitCommands(){
     git add -A
-    git commit -m "Commit message"
-    git push origin master
+    git commit -m "Added:New Feature"
+    git push origin main
 }
 
 message="Git commands executed Successfully"
