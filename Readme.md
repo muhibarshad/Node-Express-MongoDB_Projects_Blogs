@@ -19,7 +19,7 @@ If you're interested in seeing what I can do with backnd (of MEN), you've come t
 
 Welcome to [my](https://github.com/muhib7353/Node-Express-MongoDB_Projects_Blogs) Github repository of Backend blogs! Inside, you'll find a wealth of knowledge on everything from the basics of databse and REST APIS and routers to more advanced topics and best practices. Whether you're a beginner looking to learn more about backend or an experienced developer looking to improve your skills, I hope you'll find something here that's helpful and informative.
 
-## Every Server side always contain 5 files
+## Every Server side must contain these 5 files
 
 - [Exential Packages To install ](/Blogs/01_EssentialPacakges.md)
 - [Server connection](/Blogs/02_ServerConnection.md)
