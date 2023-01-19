@@ -19,11 +19,19 @@ If you're interested in seeing what I can do with backnd (of MEN), you've come t
 
 Welcome to [my](https://github.com/muhib7353/Node-Express-MongoDB_Projects_Blogs) Github repository of Backend blogs! Inside, you'll find a wealth of knowledge on everything from the basics of databse and REST APIS and routers to more advanced topics and best practices. Whether you're a beginner looking to learn more about backend or an experienced developer looking to improve your skills, I hope you'll find something here that's helpful and informative.
 
+## Every Server side always contain 5 files
+
+- [Exential Packages To install ](/Blogs/01_EssentialPacakges.md)
+- [Server connection](/Blogs/02_ServerConnection.md)
+- [Databse MongoDB connection](/Blogs/03_DataBaseConnection.md)
+- [Making Scheme for a Collection](/Blogs/04_DatabaseScheme.md)
+- [Routers](/Blogs/05_Routers.md)
+
 # 20% OFF Extra
 
 > I'm excited to share these other resources and attached files with you! From tips and tricks to templates and tools, I hope these resources will help you boost your productivity and take your skills to the next level.
 
-- [Essential Commands](/EssentialCommands.md)
+- [All Commands Cheat Sheet](/EssentialCommands.md)
 
 # 🤝 Contributing
 
