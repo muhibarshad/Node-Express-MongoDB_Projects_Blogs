@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-git add -A
-git commit -m "Added:some features"
-git push origin main
+function gitCommands(){
+    git add .
+    git commit -m "Commit message"
+    git push origin master
+}
 
-echo "Git commands executed successfully"
+message="Git commands executed Successfully"
+gitCommands && echo $message
