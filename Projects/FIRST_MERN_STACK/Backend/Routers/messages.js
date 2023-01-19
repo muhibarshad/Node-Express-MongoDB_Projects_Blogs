@@ -22,6 +22,10 @@ router.get("/:code", async (req, res) => {
     res.send(`Error ${error.message}`);
   }
 });
+
+
+
+
 router.post("/", async (req, res) => {
   try {
     const newMessage = new Message({
