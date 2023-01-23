@@ -13,6 +13,3 @@ function gitCommands() {
 }
 
 gitCommands "$1" && echo "Git Commands Executed Successfully"
-
-
-
